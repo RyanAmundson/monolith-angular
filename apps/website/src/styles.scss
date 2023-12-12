@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+html,
+body {
+    height:100vh;
+    width:100vw;
+    margin:0;
+    overflow:hidden;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+// Basic setup
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --colorMain: #fbf8ee; // Updated main color
+  --brShadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.5); // Bottom-right shadow
+  --tlShadow: 0.1rem 0.1rem 0.3rem rgba(255, 255, 255, 0.8); // Top-left shadow
+
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+  
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+}
+
+// Neumorphic text styling
+.neumorphic-text {
+    color: var(--colorMain);
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-shadow: var(--brShadow), 
+                 var(--tlShadow);
+    position: relative;
+    background-color: transparent;
+    
+
+  }
