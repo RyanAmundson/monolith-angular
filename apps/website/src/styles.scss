@@ -1,24 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-
 html,
 body {
-    height:100vh;
-    width:100vw;
-    margin:0;
-    overflow:hidden;
-    box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
 // Basic setup
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+// MIXINS
+
+@mixin background($transform) {
+    height:100vh;
+    width:100vw;
+    background: url('./assets/ai-bg-4.webp');
+    background-size: cover;
+    background-attachment: scroll, local;
+    /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-position: center; // Centers the image
+    transform: scaleY(#{$transform});
+    z-index: -1;
+    opacity: 0.5;
 }
 
 :root {
@@ -29,9 +44,9 @@ body {
   --primary-light: #8abdff;
   --primary: #6d5dfc;
   --primary-dark: #5b0eeb;
-  
-  --white: #FFFFFF;
-  --greyLight-1: #E4EBF5;
+
+  --white: #ffffff;
+  --greyLight-1: #e4ebf5;
   --greyLight-2: #c8d0e7;
   --greyLight-3: #bec8e4;
   --greyDark: #9baacf;
@@ -39,14 +54,11 @@ body {
 
 // Neumorphic text styling
 .neumorphic-text {
-    color: var(--colorMain);
-    font-weight: bold;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    text-shadow: var(--brShadow), 
-                 var(--tlShadow);
-    position: relative;
-    background-color: transparent;
-    
-
-  }
+  color: var(--colorMain);
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-shadow: var(--brShadow), var(--tlShadow);
+  position: relative;
+  background-color: transparent;
+}
